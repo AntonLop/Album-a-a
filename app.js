@@ -33,7 +33,6 @@ leftBtn.addEventListener("click", (e) =>{
     indexImf--;
     imgElement.src= listaImg[indexImf].src
 })
-fullImgBox.style.display="flex";
 
 closeImg.addEventListener("click",e=>{fullImgBox.style.display="none";})
 
