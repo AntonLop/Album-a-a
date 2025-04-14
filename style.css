@@ -139,5 +139,24 @@ z-index: 0;
     position: absolute;
     top: 5%;
     right: 5%;
+ 
     font-size: 30px;
+}
+
+footer{
+   display: flex;
+   font-family: "Love Ya Like A Sister", cursive;
+justify-content: center;
+}
+.link {
+ 
+   display: flex;
+   text-decoration: none;
+   color: black;
+   font-size: 20px;
+   text-align: center;
+   padding: 10px;
+   margin: 20px;
+border-radius: 25%;
+   background-color: #cc338b;
 }
