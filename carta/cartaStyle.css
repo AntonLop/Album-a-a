@@ -101,7 +101,7 @@ border-radius: 15px;
     font-size: 15px;
     padding: 10px;
     cursor: pointer;
-    overflow: scroll;
+     
 }
 .corazon{
     position: absolute;
@@ -129,4 +129,15 @@ border-radius: 15px;
 }
 .corazon::after{
     right: 15px;
+}
+.abierto .sobre::before{
+   transform: rotateX(180deg); 
+   z-index: 0;
+}
+.carta.mostrarCarta{
+    transform: translateY(-290px);
+    transition: transform .5s ease-in-out;
+}
+.carta.abierta{
+    z-index: 100000;
 }
