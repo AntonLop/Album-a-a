@@ -1,0 +1,143 @@
+body{
+    font-family: "Pixelify Sans", sans-serif;
+background: #d29bfd;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    width: 100%;
+    margin: 20px auto;
+}
+
+
+ img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+ }
+ 
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+ }
+ .gridGalery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+}
+ .cardGalery:first-child{
+    grid-row-start: span 2;
+ }
+ .cardGalery:nth-child(6){
+    grid-row-start: span 2;
+ }
+ 
+ .cardGalery:nth-child(9){
+    grid-row-start: span 2;
+ }
+ .cardGalery:nth-child(14){
+    grid-column-start: span 2;
+ }
+
+ @media(min-width:768px){
+    .gridGalery{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .cardGalery:nth-child(2){
+        grid-column-start: span 2;
+     }
+     .cardGalery:nth-child(12){
+        grid-column-start: span 2;
+     }
+     .cardGalery:nth-child(9){
+        grid-row-start: span 2;
+     }
+     .cardGalery:nth-child(14){
+        grid-column-start: span 3;
+     }
+
+ }
+ @media(min-width:1200px){
+    .gridGalery{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .cardGalery:nth-child(5){
+        grid-column-start: span 2;
+     }
+     .cardGalery:nth-child(7){
+        grid-column-start: span 2;
+     }
+     .cardGalery:nth-child(9){
+        grid-row-start: span 1;
+     }
+     .cardGalery:nth-child(14){
+        grid-column-start: span 2;
+     }
+     .cardGalery:nth-child(12){
+        grid-column-start: span 1;
+     }
+ }
+ .cardGalery{
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+ }
+ .cardGalery p{
+position: absolute;
+font-size: 20px;
+color: #ffff;
+bottom: 10px;
+left: 10px;
+width: 100%;
+z-index: 0;
+
+ }
+ .cardGalery:hover{
+    transform: scale(1.036);
+ }
+ .cardGalery p::before{
+    position: absolute;
+    content: "";
+    background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0, .94));
+    width: 100%;
+    height: 60px;
+    bottom: -10px;
+    left: -10px;
+    z-index: -1;
+ }
+.fullImage{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+.fullImage img{
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+}
+.fullImage i{
+    color: #ffff;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: black;
+}
+#close{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+}
