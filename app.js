@@ -43,4 +43,3 @@ fullImgBox.addEventListener("click",e=>{
    
    }
 })
-console.log(54654)
